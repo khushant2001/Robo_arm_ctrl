@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/share/meshes/base_link.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -36,10 +36,11 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/src/base_link.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
+
   <link
     name="link_1">
     <inertial>
@@ -61,13 +62,12 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://meshes/src/link_1.STL" />
+          <mesh filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_1.STL" />
       </geometry>
       <material
-        name="">
+        name="green">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0 1 0 1" />
       </material>
     </visual>
     <collision>
@@ -76,7 +76,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/src/link_1.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -115,12 +115,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/src/link_2.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_2.STL" />
       </geometry>
       <material
-        name="">
+        name="blue">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -129,7 +129,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/src/link_2.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -168,12 +168,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_3.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_3.STL" />
       </geometry>
       <material
-        name="">
+        name="yellow">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 1 0 1" />
       </material>
     </visual>
     <collision>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_3.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_3.STL" />
       </geometry>
     </collision>
   </link>
@@ -221,12 +221,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_4.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_4.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0 1 1" />
       </material>
     </visual>
     <collision>
@@ -235,7 +235,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_4.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_4.STL" />
       </geometry>
     </collision>
   </link>
@@ -274,12 +274,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_5.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_5.STL" />
       </geometry>
       <material
-        name="">
+        name="red">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="1 0 0 1" />
       </material>
     </visual>
     <collision>
@@ -288,7 +288,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_5.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_5.STL" />
       </geometry>
     </collision>
   </link>
@@ -327,12 +327,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_6.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_6.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+          rgba="0 1 1 1" />
       </material>
     </visual>
     <collision>
@@ -341,7 +341,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://meshes/link_6.STL" />
+          filename="/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_6.STL" />
       </geometry>
     </collision>
   </link>

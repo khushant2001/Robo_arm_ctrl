@@ -1,0 +1,365 @@
+<?xml version="1.0" ?>
+<sdf version='1.11'>
+  <world name = "World">
+    <model name='edo_sim'>
+      <link name='base_link'>
+        <inertial>
+          <pose>0.061758360213088302 0.437262464550775 -0.0039544219785267202 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.012384120073806799</ixx>
+            <ixy>-0.000187984913202787</ixy>
+            <ixz>-1.32683892634308e-06</ixz>
+            <iyy>7.0169034503364004e-05</iyy>
+            <iyz>-9.1741694509931906e-05</iyz>
+            <izz>0.0123862261905614</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0.990196109 1 1 1</diffuse>
+            <ambient>0.990196109 1 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name="base_to_ground" type="fixed">
+        <parent>world</parent>
+        <child>base_link</child>
+      </joint>
+      <joint name='joint_1' type='revolute'>
+        <pose relative_to='base_link'>0.057188000000000003 0.0059830999999999999 0.13342999999999999 1.5708 6.9388981390719646e-16 3.1415853071795872</pose>
+        <parent>base_link</parent>
+        <child>link_1</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_1'>
+        <pose relative_to='joint_1'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>-0.0045704884140106402 0.30383181141700399 -0.0020286641057991601 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.012384120073806799</ixx>
+            <ixy>0.00018798491320272699</ixy>
+            <ixz>-1.3268389263427101e-06</ixz>
+            <iyy>7.0169034503362202e-05</iyy>
+            <iyz>9.1741694509936799e-05</iyz>
+            <izz>0.012386226190561501</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_1_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_1.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_1_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_1.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0 1 0 1</diffuse>
+            <ambient>0 1 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name='joint_2' type='revolute'>
+        <pose relative_to='link_1'>0 0.18967000000000001 0 0.94237000000000004 -0.46340000000000003 -0.11652999999999997</pose>
+        <parent>link_1</parent>
+        <child>link_2</child>
+        <axis>
+          <xyz>-0.88846999999999998 0.2908 0.35504000000000002</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_2'>
+        <pose relative_to='joint_2'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>-0.016840648570940701 0.071318237296395998 -0.087682237308070399 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.0122070242873091</ixx>
+            <ixy>0.00093059666767093395</ixy>
+            <ixz>-0.0011486325666074</ixz>
+            <iyy>0.0075760656242659999</iyy>
+            <iyz>0.0059380539105296998</iyz>
+            <izz>0.0050574253872964596</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_2_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_2.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_2_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_2.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0 0 1 1</diffuse>
+            <ambient>0 0 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name='joint_3' type='revolute'>
+        <pose relative_to='link_2'>-0.024558 0.12737000000000001 -0.16578000000000001 0.97336 -0.36296000000000012 2.8252999999999999</pose>
+        <parent>link_2</parent>
+        <child>link_3</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_3'>
+        <pose relative_to='joint_3'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0.0045704884140106298 0.096252489007444694 0.0039544219785266196 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.012384120073806799</ixx>
+            <ixy>0.00018798491320271799</ixy>
+            <ixz>1.3268389263426601e-06</ixz>
+            <iyy>7.0169034503361904e-05</iyy>
+            <iyz>-9.17416945099381e-05</iyz>
+            <izz>0.012386226190561501</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_3_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_3.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_3_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_3.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 0 1</diffuse>
+            <ambient>1 1 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name='joint_4' type='revolute'>
+        <pose relative_to='link_3'>0.0088000000000000005 -0.1588 0 -1.5708 0 0</pose>
+        <parent>link_3</parent>
+        <child>link_4</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_4'>
+        <pose relative_to='joint_4'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>-0.0042295115859711397 -0.0039544219785262701 0.255057059248813 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.012384120073806799</ixx>
+            <ixy>-1.32683892634285e-06</ixy>
+            <ixz>0.00018798491320271799</ixz>
+            <iyy>0.012386226190561501</iyy>
+            <iyz>9.1741694509950595e-05</iyz>
+            <izz>7.0169034503362094e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_4_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_4.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_4_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_4.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 0 1 1</diffuse>
+            <ambient>1 0 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name='joint_5' type='revolute'>
+        <pose relative_to='link_4'>0 0 -0.1053 -3.1415853071795872 1.1101999999998149e-14 -3.1415853071795872</pose>
+        <parent>link_4</parent>
+        <child>link_5</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_5'>
+        <pose relative_to='joint_5'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0.00422951158596777 -0.0039544219785261599 -0.36035248900744499 0 0 0</pose>
+          <mass>0.078594233876236805</mass>
+          <inertia>
+            <ixx>0.012384120073806799</ixx>
+            <ixy>1.32683892634191e-06</ixy>
+            <ixz>0.000187984913202582</ixz>
+            <iyy>0.012386226190561501</iyy>
+            <iyz>-9.1741694509955203e-05</iyz>
+            <izz>7.0169034503358096e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_5_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_5.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_5_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_5.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 0 0 1</diffuse>
+            <ambient>1 0 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+      <joint name='joint_6' type='revolute'>
+        <pose relative_to='link_5'>-0.0038999999999999998 0 0.1636 -1.5708 1.2490000000000004e-14 -7.8886090522101163e-31</pose>
+        <parent>link_5</parent>
+        <child>link_6</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_6'>
+        <pose relative_to='joint_6'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>1.1058123329035799e-05 -0.00932339385603209 6.3562431571857399e-06 0 0 0</pose>
+          <mass>0.027970249732266202</mass>
+          <inertia>
+            <ixx>7.63464744598253e-06</ixx>
+            <ixy>1.8920495906722099e-10</ixy>
+            <ixz>5.3297031603959903e-09</ixz>
+            <iyy>1.45744912344428e-05</iyy>
+            <iyz>1.08958003890421e-10</iyz>
+            <izz>7.6287179149810301e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_6_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_6.STL</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='link_6_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/khush_24_01/Robo_arm_ctrl/install/meshes/share/meshes/link_6.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>0 1 1 1</diffuse>
+            <ambient>0 1 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

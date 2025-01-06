@@ -10,7 +10,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
     # Define the URDF file
-    urdf_file_name = 'model.urdf'
+    urdf_file_name = 'model.sdf'
     urdf = os.path.join(
         get_package_share_directory('physics'),
         urdf_file_name
